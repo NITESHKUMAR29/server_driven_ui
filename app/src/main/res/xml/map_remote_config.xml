@@ -7,8 +7,25 @@
             {
             "view_type": "container_appbar",
             "container_appbar": {
-            "appbar_search_hint": "person",
+            "appbar_search_hint": "kumarss",
             "appbar_search_hint_color": "blue"
+            },
+            "container_activity": {
+            "container_activity_title": "Default Title",
+            "container_activity_title_size": 12,
+            "container_activity_title_color": "black",
+            "container_activity_end_title": "End Title",
+            "container_activity_end_click": "End Click",
+            "container_activity_item": {
+            "adapter_activity_product_title_size": 14,
+            "adapter_activity_product_title_color": "green",
+            "adapter_activity_product_price_size": 16,
+            "adapter_activity_product_price_color": "blue",
+            "adapter_activity_product_reduction_title_size": 12
+            }
+            },
+            "container_mock": {
+            "container_mock_title": "Container Mock"
             }
             }
             ]

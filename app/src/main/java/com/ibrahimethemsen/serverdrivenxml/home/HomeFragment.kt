@@ -1,6 +1,7 @@
 package com.ibrahimethemsen.serverdrivenxml.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,7 +37,10 @@ class HomeFragment : Fragment() {
             setAdapterUi(it)
         }
         viewModel.activityList.observe(viewLifecycleOwner) {
-            setAdapterUser(it)
+            if (!it.isNullOrEmpty()){
+                setAdapterUser(it)
+            }
+
         }
     }
 

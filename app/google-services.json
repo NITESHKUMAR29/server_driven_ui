@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1035319685638",
+    "project_id": "serverdrivenxml-3d3ec",
+    "storage_bucket": "serverdrivenxml-3d3ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035319685638:android:cb778e1258b42eccb40987",
+        "android_client_info": {
+          "package_name": "com.ibrahimethemsen.serverdrivenxml"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz9ZUcs2K7u1xJe3pypTXA0vCnKTYIyiE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

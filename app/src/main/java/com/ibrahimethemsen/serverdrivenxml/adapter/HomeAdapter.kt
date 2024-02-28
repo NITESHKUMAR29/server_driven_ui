@@ -1,5 +1,6 @@
 package com.ibrahimethemsen.serverdrivenxml.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -104,6 +105,7 @@ class HomeAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun getItemViewType(position: Int): Int {
         return when (viewTypeList[position].viewType) {
+
             ID_APP_BAR -> VT_APP_BAR
             ID_ACTIVITY -> VT_ACTIVITY
             ID_MOCK -> VT_MOCK

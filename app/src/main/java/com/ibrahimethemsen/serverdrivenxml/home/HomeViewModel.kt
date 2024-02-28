@@ -1,5 +1,6 @@
 package com.ibrahimethemsen.serverdrivenxml.home
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -30,13 +31,13 @@ class HomeViewModel @Inject constructor(
     }
     private fun getActivityList(){
         viewModelScope.launch {
-            remoteConfig.fetchToLiveData("product_offer",gson,_activityList)
+            remoteConfig.fetchToLiveData("product_offer_config",gson,_activityList)
         }
     }
 
     private fun getHomeUi(){
         viewModelScope.launch {
-            remoteConfig.fetchToLiveData("home_screen",gson,_homeScreenUi)
+            remoteConfig.fetchToLiveData("home_screen_config",gson,_homeScreenUi)
         }
     }
 }
@@ -48,10 +49,12 @@ inline fun <reified T> FirebaseRemoteConfig.fetchToLiveData(
     liveData: MutableLiveData<T>
 ) {
     this.fetchAndActivate().addOnCompleteListener {
+
         if (it.isSuccessful) {
             val keyString = this.getString(key)
             val type = object : TypeToken<T>() {}.type
             val jsonModel = gson.fromJson<T>(keyString, type)
+            Log.d("responsess",jsonModel.toString())
             liveData.postValue(jsonModel)
         }
     }
